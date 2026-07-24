@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Page Not Found — Khaled Halloua</title>
+    <meta
+      name="description"
+      content="The page you're looking for doesn't exist."
+    />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Khaled Halloua" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Performance -->
+    <link
+      rel="preconnect"
+      href="https://cdn.jsdelivr.net"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/fontsource/fonts/fira-sans@5.1.0/latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/fontsource/fonts/fira-sans@5.1.0/latin-500-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/fontsource/fonts/fira-code@5.1.0/latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <!-- Same stylesheet as the main site (absolute path — 404 can be "reached" from any depth) -->
+    <link rel="stylesheet" href="/styles.css" />
+
+    <style>
+      /* Small additions scoped to the 404 page only */
+      .error-code {
+        font-family: var(--font-mono);
+        font-size: 0.875rem;
+        color: var(--text-subtle);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding-bottom: 1rem;
+        display: block;
+      }
+
+      .home-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.375rem;
+        margin-top: 2rem;
+        font-family: var(--font-mono);
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        text-decoration: none;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0.125rem;
+        transition:
+          color 0.2s ease,
+          border-color 0.2s ease;
+        width: fit-content;
+      }
+
+      .home-link:hover {
+        color: var(--text-main);
+        border-color: var(--text-muted);
+      }
+
+      .home-link .arrow {
+        font-size: 0.75rem;
+        color: var(--text-subtle);
+        transition:
+          transform 0.2s ease,
+          color 0.2s ease;
+      }
+
+      .home-link:hover .arrow {
+        color: var(--text-muted);
+        transform: translate(2px, -2px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Video Background (same as main site) -->
+    <div class="video-bg-wrapper">
+      <video
+        class="video-bg"
+        autoplay
+        loop
+        muted
+        playsinline
+        poster="/assets/background.webp"
+        aria-hidden="true"
+      >
+        <source src="/assets/background.mp4" type="video/mp4" />
+        <img src="/assets/background.webp" alt="" class="video-bg" />
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+
+    <div class="page-container">
+      <!-- Header (same as main site) -->
+      <header class="header animate-header">
+        <div class="logo-container">
+          <a href="/" aria-label="Khaled Halloua — Home" class="logo-link">
+            <svg
+              class="logo"
+              viewBox="0 0 196 71"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Khaled Halloua logo</title>
+              <g clip-path="url(#a)" fill="currentColor">
+                <path
+                  d="M196 .435h-27.674v23.318H196V.435ZM195.989 70.91h-27.641c0-11.083-10.899-20.068-24.341-20.068v.026h-16.999v19.98H98.725V.206h28.283v27.846h16.999c28.711 0 51.982 19.187 51.982 42.857ZM95.081.25v70.642H69.374V50.798h-17c-13.442 0-24.34 8.994-24.34 20.076H.403c0-12.438 6.421-23.635 16.69-31.466C6.823 31.575.402 20.378.402 7.94V.25h27.641v7.69c0 11.082 10.899 20.067 24.34 20.067v-.026h17V.25h25.708-.01Z"
+                />
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h196v71H0z" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+        <span class="location">Algiers, DZ</span>
+      </header>
+
+      <!-- Hero: 404 message -->
+      <main class="hero">
+        <div class="hero-content">
+          <span class="error-code animate-header">Error 404</span>
+
+          <div class="title-mask">
+            <h1 class="title animate-title">Page not found</h1>
+          </div>
+
+          <div class="description-grid">
+            <h2 class="subtitle animate-subtitle">
+              The page you're looking for doesn't exist, may have moved, or the
+              link is broken.
+            </h2>
+          </div>
+
+          <a href="/" class="home-link animate-tags">
+            Back to home <span class="arrow">↗</span>
+          </a>
+        </div>
+      </main>
+
+      <!-- Footer (same as main site) -->
+      <footer class="footer animate-footer">
+        <nav aria-label="Social Links" class="social-links">
+          <a
+            href="https://github.com/khaledhalloua"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+          >
+            GitHub <span class="arrow">↗</span>
+          </a>
+          <a
+            href="https://linkedin.com/in/khaledhalloua"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+          >
+            LinkedIn <span class="arrow">↗</span>
+          </a>
+        </nav>
+
+        <div class="email-container">
+          <a href="mailto:contact@khaledhalloua.dev" class="email-link">
+            contact@khaledhalloua.dev
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+
+  <!-- Same analytics script as the main site -->
+  <script
+    defer
+    src="https://cloud.umami.is/script.js"
+    data-website-id="d20f0212-45af-4956-b6aa-7d191e6fa3d3"
+  ></script>
+</html>
